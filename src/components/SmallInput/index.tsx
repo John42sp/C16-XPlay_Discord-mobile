@@ -1,0 +1,16 @@
+import React from 'react';
+import { TextInput, TextInputProps} from 'react-native';
+
+import { styles } from './style';
+
+
+export  function SmallInput({ ...rest }: TextInputProps) {
+
+  return (
+    <TextInput 
+        style={styles.container}
+        keyboardType="numeric"
+        { ...rest }  //reactnative/docs/textinput: need to check keyboardtype for ios x android
+    />
+  );
+}
